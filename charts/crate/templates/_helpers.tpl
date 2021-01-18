@@ -119,3 +119,14 @@ Fallback to RAM disk for database file storage if persistent volume is disabled.
           {{- end }}
   {{- end }}
 {{- end -}}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "crate.serviceAccountName" -}}
+    {{- if .Values.serviceAccount.create }}
+        {{- default (include "crate.fullname" .) .Values.serviceAccount.name }}
+    {{- else }}
+        {{- default "default" .Values.serviceAccount.name }}
+    {{- end }}
+{{- end }}

@@ -25,6 +25,7 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
         {{- end }}
     spec:
+      serviceAccountName: {{ include "crate.serviceAccountName" . }}
     {{- if .Values.priorityClassName }}
       priorityClassName: {{ .Values.priorityClassName }}
     {{- end }}
@@ -41,6 +42,8 @@ spec:
         image: {{ .Values.image.name }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         command: {{ template "crate.command" . }}
+        securityContext:
+          privileged: true
         {{ template "crate.mounts" . }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
