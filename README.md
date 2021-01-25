@@ -1,3 +1,6 @@
+
+<g-emoji class="g-emoji" alias="blush" fallback-src="https://github.com/buildkite/emojis/blob/master/img-buildkite-64/helm.png"></g-emoji>
+
 # Orchestra Cities Helm Charts
 
 This project includes [helm](https://helm.sh/) charts developed to deploy
