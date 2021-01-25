@@ -1,5 +1,5 @@
 
-<g-emoji class="g-emoji" alias="blush" fallback-src="https://github.com/buildkite/emojis/blob/master/img-buildkite-64/helm.png"></g-emoji>
+<g-emoji class="g-emoji" alias="blush" fallback-src="https://github.com/buildkite/emojis/blob/master/img-buildkite-64/helm.png">:whale:</g-emoji>
 
 # Orchestra Cities Helm Charts
 
